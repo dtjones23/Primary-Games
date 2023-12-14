@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e4825508-805a-470d-9cec-90b5291b7e4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../gitlab/UofW-VIRT-FSF-PT-08-2023-U-LOLC/14-MVC/01-Activities/20-Stu_Middleware/Unsolved/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../gitlab/UofW-VIRT-FSF-PT-08-2023-U-LOLC/14-MVC/01-Activities/27-Evr_Prettier/Unsolved/package-lock.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../gitlab/UofW-VIRT-FSF-PT-08-2023-U-LOLC/14-MVC/01-Activities/28-Stu_Mini-Project/Develop/controllers/homepageRoutes.js" afterDir="false" />
@@ -235,7 +234,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/mainCode",
     "last_opened_file_path": "C:/Users/xiong/Desktop/School/Projects/Gaming-Market",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -247,6 +246,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xiong\Desktop\School\Projects\Gaming-Market\models" />
+      <recent name="C:\Users\xiong\Desktop\School\Projects\Gaming-Market\db" />
+      <recent name="C:\Users\xiong\Desktop\School\Projects\Gaming-Market\controllers" />
       <recent name="C:\Users\xiong\Desktop\School\Projects\Gaming-Market" />
     </key>
   </component>
@@ -258,7 +260,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702520001741</updated>
-      <workItem from="1702520002789" duration="309000" />
+      <workItem from="1702520002789" duration="869000" />
     </task>
     <servers />
   </component>
