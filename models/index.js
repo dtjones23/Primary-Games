@@ -1,3 +1,3 @@
-const User = require("./user") // To be used as an object
+const User = require("./User") // To be used as an object
 
-module.exports = {User};
+module.exports = { User };
