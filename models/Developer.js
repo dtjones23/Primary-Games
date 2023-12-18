@@ -2,9 +2,9 @@ const sequelize = require('../config/connection');
 const { DataTypes, Model } = require("sequelize");
 
 
-class Game extends Model {}
+class Developer extends Model {}
 
-Game.init(
+Developer.init(
     // Used to initialize the model with attributes and configuration
     {
         id: {
@@ -22,28 +22,7 @@ Game.init(
             allowNull: false,
             unique: true,
         },
-        released: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-        },
-        background_image: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        rating: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        reviews_count: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        platforms: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        genres: {
+        games: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -53,8 +32,8 @@ Game.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'game',
+        modelName: 'developer',
     }
 );
 
-module.exports = Game;
+module.exports = Developer;
