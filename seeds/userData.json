@@ -1,0 +1,27 @@
+[
+  {
+    "username": "QuirkyQuokka",
+    "email": "quirkyquokka@example.com",
+    "password": "password1"
+  },
+  {
+    "username": "BumblingBee",
+    "email": "bumblingbee@example.com",
+    "password": "password2"
+  },
+  {
+    "username": "GigglingGiraffe",
+    "email": "gigglinggiraffe@example.com",
+    "password": "password3"
+  },
+  {
+    "username": "JollyJellyfish",
+    "email": "jollyjellyfish@example.com",
+    "password": "password4"
+  },
+  {
+    "username": "ZanyZebra",
+    "email": "zanyzebra@example.com",
+    "password": "password5"
+  }
+]
