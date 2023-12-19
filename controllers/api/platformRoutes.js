@@ -1,25 +1,6 @@
-// const APIKey = "ca6843ad46b947099b5a639778e7a3be";
-// const requestPlatforms = "https://api.rawg.io/api/platforms";
-//
-// async function getPlatform() {
-//     try {
-//         const response = await fetch(requestPlatforms + `?key=${APIKey}`);
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         }
-//
-//         const data = await response.json();
-//         console.log(data);
-//     } catch (error) {
-//         console.error("Error:", error);
-//     }
-// }
-//
-// getPlatform();
-
-const express = require('express');
+import express from 'express';
+import fetch from 'node-fetch';
 const router = express.Router();
-const fetch = require('node-fetch');
 
 const APIKey = "ca6843ad46b947099b5a639778e7a3be";
 const platformsAPI = "https://api.rawg.io/api/platforms";
@@ -55,4 +36,4 @@ router.use(fetchPlatformsMiddleware);
 //     res.json({ platforms });
 // });
 
-module.exports = router;
+export default router;

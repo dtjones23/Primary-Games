@@ -1,6 +1,6 @@
-const User = require("./User") // To be used as an object
-const Developer = require("./Developer")
-const Platform = require("./Platform")
-const Game = require("./Game")
+import User from "./User.js"; // To be used as an object
+import Developer from "./Developer.js";
+import Platform from "./Platform.js";
+import Game from "./Game.js";
 
-module.exports = { User, Developer, Platform, Game};
+export { User, Developer, Platform, Game};

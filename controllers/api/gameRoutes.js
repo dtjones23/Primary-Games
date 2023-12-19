@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
+import fetch from 'node-fetch';
 const router = express.Router();
-const fetch = require('node-fetch');
 
 const APIKey = "ca6843ad46b947099b5a639778e7a3be";
 const gamesAPI = "https://api.rawg.io/api/games";
@@ -36,4 +36,4 @@ router.use(fetchGamesMiddleware);
 //     res.json({ games });
 // });
 
-module.exports = router;
+export default router;

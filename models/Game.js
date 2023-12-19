@@ -1,5 +1,5 @@
-const sequelize = require('../config/connection');
-const { DataTypes, Model } = require("sequelize");
+import sequelize from '../config/connection.js';
+import { DataTypes, Model } from "sequelize";
 
 
 class Game extends Model {}
@@ -52,4 +52,4 @@ Game.init(
     }
 );
 
-module.exports = Game;
+export default Game;

@@ -1,4 +1,6 @@
-const router = require('express').Router();
+import {monitorEventLoopDelay} from "node:perf_hooks";
+import express from "express";
+const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
@@ -13,3 +15,5 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+export default router;
