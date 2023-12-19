@@ -1,8 +1,12 @@
 // Setting up main router
-const router = require('express').Router();
-const apiRoutes = require('./api')
-const userRoutes = require('./userRoutes');
+import apiRoutes from './api/index.js';
+import userRoutes from './api/userRoutes.js';
+import homeRoutes from "./homeRoutes.js";
+import express from "express";
 
+const router = express.Router();
+
+router.use('/', homeRoutes);
 router.use('/api', apiRoutes)
 router.use('/users', userRoutes);
-module.exports = router;
+export default router;

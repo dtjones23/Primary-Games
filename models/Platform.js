@@ -1,5 +1,5 @@
-const sequelize = require('../config/connection');
-const { DataTypes, Model } = require("sequelize");
+import sequelize from '../config/connection.js';
+import { DataTypes, Model } from "sequelize";
 
 
 class Platform extends Model {}
@@ -36,4 +36,4 @@ Platform.init(
     }
 );
 
-module.exports = Platform;
+export default Platform;
