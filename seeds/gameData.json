@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Shadow Quest",
+    "released": "2022-01-01",
+    "background_image": "http://example.com/shadowquest.jpg",
+    "rating": "4.5",
+    "reviews_count": "100",
+    "platforms": "PC, PS5",
+    "genres": "Action, Adventure"
+  },
+  {
+    "name": "Galaxy Guardian",
+    "released": "2022-02-01",
+    "background_image": "http://example.com/galaxyguardian.jpg",
+    "rating": "4.0",
+    "reviews_count": "200",
+    "platforms": "PC, Xbox Series X",
+    "genres": "RPG, Adventure"
+  },
+  {
+    "name": "Mystic Mountain",
+    "released": "2022-03-01",
+    "background_image": "http://example.com/mysticmountain.jpg",
+    "rating": "4.7",
+    "reviews_count": "300",
+    "platforms": "PC, PS5, Xbox Series X",
+    "genres": "Action, RPG"
+  },
+  {
+    "name": "Puzzle Paradise",
+    "released": "2022-04-01",
+    "background_image": "http://example.com/puzzleparadise.jpg",
+    "rating": "4.2",
+    "reviews_count": "400",
+    "platforms": "PC",
+    "genres": "Adventure, Puzzle"
+  },
+  {
+    "name": "Dragon Dynasty",
+    "released": "2022-05-01",
+    "background_image": "http://example.com/dragondynasty.jpg",
+    "rating": "4.9",
+    "reviews_count": "500",
+    "platforms": "PS5, Xbox Series X",
+    "genres": "Action, Adventure, RPG"
+  }
+]
