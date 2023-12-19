@@ -13,15 +13,9 @@ Game.init(
             primaryKey: true,
             autoIncrement: true,
         },
-      
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        slug: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
         },
         released: {
             type: DataTypes.STRING,

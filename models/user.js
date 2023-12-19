@@ -7,7 +7,6 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
 User.init(
     // Used to initialize the model with attributes and configuration
   {
