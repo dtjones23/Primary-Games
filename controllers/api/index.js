@@ -8,6 +8,6 @@ const gameRoutes = require('./gameRoutes');
 router.use('/categories', categoryRoutes);
 router.use('/developers', developerRoutes);
 router.use('/platforms',platformRoutes);
-router.use('/games', gameRoutes)
+router.use('/games', gameRoutes);
 
 module.exports = router;
