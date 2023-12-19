@@ -1,7 +1,7 @@
-const sequelize = require('../config/connection');
-const { User, Game } = require('../models');
-const userData = require('./userData.json');
-const gameData = require('./gameData.json');
+import sequelize from '../config/connection.js';
+import { User, Game } from '../models/index.js';
+import userData from './userData.json';
+import gameData from './gameData.json';
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
     const users = await User.bulkCreate(userData, {

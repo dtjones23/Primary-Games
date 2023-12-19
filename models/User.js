@@ -1,13 +1,13 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+import { Model, DataTypes } from 'sequelize';
+import bcrypt from 'bcrypt';
+import sequelize from '../config/connection.js';
+import router from "../controllers/api/index.js";
 
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
 User.init(
     // Used to initialize the model with attributes and configuration
   {
@@ -53,4 +53,4 @@ User.init(
   }
 );
 
-module.exports = User;
+export default User;

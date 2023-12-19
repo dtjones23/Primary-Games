@@ -1,15 +1,20 @@
-const path = require('path');
-const express = require('express');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
-const sequelize = require('./config/connection');
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
+import express from 'express';
+import exphbs from 'express-handlebars';
+import routes from './controllers/index.js';
+// import helpers from './utils/helpers';
+import sequelize from './config/connection.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Create the Handlebars.js engine object with custom helper functions
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({  });
 
 // Inform Express.js which template engine we're using
 app.engine('handlebars', hbs.engine);

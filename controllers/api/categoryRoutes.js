@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
+import fetch from 'node-fetch';
 const router = express.Router();
-const fetch = require('node-fetch').default();
 
 const APIKey = "ca6843ad46b947099b5a639778e7a3be";
 const genresAPI = "https://api.rawg.io/api/genres";
@@ -36,4 +36,4 @@ router.use(fetchGenresMiddleware);
 //     res.json({ genres });
 // });
 
-module.exports = router;
+export default router;
