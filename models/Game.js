@@ -13,7 +13,7 @@ Game.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        username: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
