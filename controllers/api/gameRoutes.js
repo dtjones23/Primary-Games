@@ -24,6 +24,14 @@ const fetchGamesMiddleware = async (req, res, next) => {
     }
 };
 
+router.get('/games', (req, res) => {
+    // Access the fetched games through req.games
+    const games = req.games;
+
+    // Send the games as a response
+    res.json({ games });
+});
+
 // Use the middleware for all routes in this router
 router.use(fetchGamesMiddleware);
 

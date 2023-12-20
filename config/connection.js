@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(
         'game_db',
         'root',
-        '7#06Qq^FRwD^k@b=;JXk{M;Q?',
+        '',
         {
             host: 'localhost',
             dialect: 'mysql',
