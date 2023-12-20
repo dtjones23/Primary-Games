@@ -1,0 +1,53 @@
+
+
+#shopping-cart-icon {
+    color: blue; /* Replace 'red' with the color you want */
+}
+
+.vw {
+    width: 80vw;
+}
+
+.input {
+    width: 30vw
+}
+
+.gameCover {
+    width: 100vw;
+    height: 500px;
+}
+
+.game-card {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.game-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.game-card .game-title {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 300px;
+    box-sizing: border-box;
+}
