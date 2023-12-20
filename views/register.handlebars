@@ -3,41 +3,42 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
     <section class="section">
         <div class="container">
-            <h2 class="title">Login</h2>
+            <h2 class="title">Create an Account</h2>
 
-            <!-- Login Form -->
-            <form id="loginForm">
+            <!-- Registration Form -->
+            <form id="registerForm">
                 <div class="field">
-                    <label for="email-login" class="label">Email:</label>
+                    <label for="email-register" class="label">Email:</label>
                     <div class="control">
-                        <input class="input" type="text" id="email-login" placeholder="Enter your email">
+                        <input class="input" type="text" id="email-register" placeholder="Enter your email">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label for="password-login" class="label">Password:</label>
+                    <label for="password-register" class="label">Password:</label>
                     <div class="control">
-                        <input class="input" type="password" id="password-login" placeholder="Enter your password">
+                        <input class="input" type="password" id="password-register" placeholder="Enter your password">
                     </div>
                 </div>
 
                 <div class="field">
                     <div class="control">
-                        <button class="button is-primary" type="button" onclick="handleLogin()">Login</button>
+                        <button class="button is-primary" type="button" onclick="handleRegistration()">Create Account</button>
                     </div>
                 </div>
             </form>
 
-            <!-- Link to Registration Page -->
-            <p>Don't have an account? <a href="/views/register.handlebars">Create one</a>.</p>
+            <!-- Link to Login Page -->
+            <p>Already have an account? <a href="/views/login.handlebars">Login</a>.</p>
         </div>
     </section>
+
     <script src="/public/js/login.js"></script>
 </body>
 </html>
