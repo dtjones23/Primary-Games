@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    
+    <style>
+        .custom-notification {
+            height: 120px; /* Adjust the height as needed */
+            width: 80%; /* Adjust the width as needed */
+            padding: 1.5rem; /* Adjust the padding as needed */
+            margin: 0 auto; /* Center the notifications */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space elements evenly */
+        }
+
+        .reference-button {
+            margin-right: 1rem; /* Adjust the margin as needed */
+            width: 25%; /* 1/4 of the container width */
+        }
+
+        .stacked-buttons {
+            display: flex;
+            flex-direction: column;
+            width: 75%; /* Fill the remaining width */
+        }
+
+        .stacked-buttons .button {
+            height: 50%; /* Adjust the height as needed */
+            margin-bottom: 0.5rem; /* Adjust the margin as needed */
+            color: #fff; /* Text color */
+        }
+
+        .stacked-buttons .button:last-child {
+            margin-bottom: 0; /* Remove margin for the last button */
+        }
+
+        /* Add margin to the bottom of the User Info bar */
+        .notification.is-info.has-text-centered {
+            margin-bottom: 2rem; /* Adjust the margin as needed */
+        }
+
+        /* Additional style for the "Here" bar */
+        .additional-bar {
+            height: 100%; /* Match the height of the parent bar */
+            background-color: #3273dc; /* Example color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; /* Text color */
+            margin-left: 0.5rem; /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container">
+            <!-- Centered Title -->
+            <h1 class="title has-text-centered">My Game Lounge</h1>
+
+            <!-- Buttons Row -->
+            <div class="columns is-flex is-justify-content-space-between">
+                <div class="column is-half">
+                    <div class="buttons is-pulled-left">
+                        <button class="button is-primary">Logo</button>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="buttons is-pulled-right">
+                        <button class="button is-danger">Homepage</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Info Bar Row -->
+            <div class="columns">
+                <div class="column is-full">
+                    <div class="notification is-info has-text-centered">
+                        DirtyJamZ
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Bar with Buttons -->
+            <div class="columns is-multiline is-centered">
+                <div class="column is-two-thirds">
+                    <div class="notification is-danger custom-notification">
+                        <button class="button is-danger reference-button">Title of Game</button>
+                        <div class="stacked-buttons">
+                            <button class="button is-primary has-background-black">Activation key</button>
+                            <button class="button is-primary">Leave a review</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- "Here" Bar outside the first bar -->
+                <div class="column is-one-third">
+                    <div class="notification is-danger additional-bar">
+                        Here
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
