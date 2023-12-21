@@ -1,23 +1,26 @@
 [
   {
+    "id": "1",
     "name": "Shadow Quest",
     "released": "2022-01-01",
-    "background_image": "http://example.com/shadowquest.jpg",
+    "background_image": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/en_US/games/switch/s/shadow-quest-switch/hero",
     "rating": "4.5",
     "reviews_count": "100",
     "platforms": "PC, PS5",
     "genres": "Action, Adventure"
   },
   {
+    "id": "2",
     "name": "Galaxy Guardian",
     "released": "2022-02-01",
-    "background_image": "http://example.com/galaxyguardian.jpg",
+    "background_image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1088850/header.jpg?t=1700763034",
     "rating": "4.0",
     "reviews_count": "200",
     "platforms": "PC, Xbox Series X",
     "genres": "RPG, Adventure"
   },
   {
+    "id": "3",
     "name": "Mystic Mountain",
     "released": "2022-03-01",
     "background_image": "http://example.com/mysticmountain.jpg",
@@ -27,15 +30,17 @@
     "genres": "Action, RPG"
   },
   {
+    "id": "4",
     "name": "Puzzle Paradise",
     "released": "2022-04-01",
-    "background_image": "http://example.com/puzzleparadise.jpg",
+    "background_image": "https://play-lh.googleusercontent.com/ZroQR8HW-8YfL44WbGZtLY8o9JgqyB6DX5tgbU12vvlGtomYgDg9NJbWDtDmwHPmKbA=s48-rw",
     "rating": "4.2",
     "reviews_count": "400",
     "platforms": "PC",
     "genres": "Adventure, Puzzle"
   },
   {
+    "id": "5",
     "name": "Dragon Dynasty",
     "released": "2022-05-01",
     "background_image": "http://example.com/dragondynasty.jpg",
