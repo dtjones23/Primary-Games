@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     //const products = productData.map((product) => product.get({ plain: true }));
     //DO THE ABOVE FOR YOUR GAME DATA OR USER DATA IN ORDER TO SHOW WITH HANDLEBARS
 
-    res.render('homepage'
+    res.render('login'
     //, {products: products}
 );
   } catch (err) {

@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
 });
 
 // User logs in
-router.post('/login', async (req, res) => {
+router.get('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -46,7 +46,6 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ success: false, message: 'Internal server error' });
     }
 });
-
 
 
 export default router;
