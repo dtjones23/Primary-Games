@@ -18,6 +18,10 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/homepage', (req, res) => {
+  res.render('homepage');
+});
+
 router.get('/checkout', (req, res) => {
   res.render('checkout');
 });
