@@ -7,9 +7,9 @@ import express from "express";
 
 const router = express.Router();
 
-router.use('/categories', categoryRoutes);
-router.use('/developers', developerRoutes);
-router.use('/platforms',platformRoutes);
-router.use('/games', gameRoutes);
+router.use('/', categoryRoutes);
+router.use('/', developerRoutes);
+router.use('/',platformRoutes);
+router.use('/', gameRoutes);
 
 export default router;

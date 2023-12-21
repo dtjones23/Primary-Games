@@ -13,38 +13,25 @@
     </div>
 
     <input class="input is-rounded m-auto" type="text" placeholder="Rounded input">
-    <a><i class="fas fa-shopping-cart m-5 p-0 is-size-4" id="shopping-cart-icon"></i></a>
+    <a><i class="fas fa-shopping-cart m-5 p-0 is-size-4" id="shopping-cart"></i></a>
 
 </section>
 
     <!--random Game Cover background Image-->
-<section class="hero mb-5 is-medium has-background-dark">
-    <div class="gameCover">
-    </div>
+<section class="hero mb-5 is-medium">
+    <!-- Game Image -->
+        <img class="main-background" src="https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"<!--{{game.background_image}}-->/>
 </section>
 
 <section class="hero m-auto">
-    <div class="buttons is-flex is-flex-direction-row">
-    <button class="button is-normal">PlayStation 5</button>
-    <button class="button is-normal">PlayStation 4</button>
-    <button class="button is-normal">Xbox Series X</button>
-    <button class="button is-normal">Xbox One</button>
-    <button class="button is-normal">Nitendo Switch</button>
-    <button class="button is-normal">PC</button>
-    <button class="button is-normal">View All</button>
-    </div>
 
-    <div>
-    <button class="button is-small">Action Adventure</button>
-    <button class="button is-small">Arcade/Puzzle</button>
-    <button class="button is-small">Family/Party</button>
-    <button class="button is-small">Fighting</button>
-    <button class="button is-small">Music/Dancing</button>
-    <button class="button is-small">Racing</button>
-    <button class="button is-small">RPG</button>
-    <button class="button is-small">Shooter</button>
-    <button class="button is-small">Sports</button>
-    <button class="button is-small">Strategy/Slim</button>
+    {{#each platforms}}
+    <button class="button platforms is-normal">{{this.name}}</button>
+    {{/each}}
+    
+    <div id="button-container">
+    <button class="button genre is-small">Action Adventure</button>
+    <button class="button genre is-small">RPG</button>
     </div>
 </section>
 
@@ -53,8 +40,8 @@
     <p class="title is-underlined">
     Games
     </p>
-    <p>Genre/s:</p>
-    <p>Platform/s:</p>
+    <p>Genre/s: <span id="genre-input"></span></p>
+    <p>Platform/s: <span id="platform-input"></span></p>
     </div>
 </section>
 
@@ -64,31 +51,20 @@
     
 
     <!-- Game Card -->
+    
     <div class="game-card">
-        <img src="#" alt="Game Background">
-        <p class="game-title">Game Title</p>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1088850/header.jpg?t=1700763034" alt="Game Background">
+        <p class="game-title">{{game.name}}</p>
     </div>
+    
 
     <!-- Pop-up Window for card-->
     <div id="popup" class="popup" style="display: none;">
-        <button id="close-button">Close</button>
-        <p class="game-bio">Game 1 Bio</p>
+        <button id="close-button">X</button>
+        <p class="game-bio">{{this.description}}</p>
         <p class="game-platform">Game Platform</p>
         <p class="game-cost">Game Cost</p>
-    </div>
-
-    <!-- Game Card -->
-    <div class="game-card">
-        <img src="#" alt="Game Background">
-        <p class="game-title">Game Title</p>
-    </div>
-
-    <!-- Pop-up Window for card-->
-    <div id="popup" class="popup" style="display: none;">
-        <button id="close-button">Close</button>
-        <p class="game-bio">Game 2 Bio</p>
-        <p class="game-platform">Game Platform</p>
-        <p class="game-cost">Game Cost</p>
+        <button class="button is-primary" id="add-to-cart-button">Add to Cart</button>
     </div>
 
     </div>
