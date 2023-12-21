@@ -1,5 +1,7 @@
 import {monitorEventLoopDelay} from "node:perf_hooks";
 import express from "express";
+import Game from "../models/Game.js";
+
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -11,6 +13,21 @@ router.get('/', async (req, res) => {
     res.render('homepage'
     //, {products: products}
 );
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/checkout', (req, res) => {
+  res.render('checkout');
+});
+
+router.get('/checkout/:id', async (req, res) => {
+  try {
+    const gameData = await Game.findByPk(req.params.id);
+    const game = gameData.get({ plain: true });
+
+    res.render('checkout', { game });
   } catch (err) {
     res.status(500).json(err);
   }
