@@ -16,10 +16,14 @@ router.post('/register', async (req, res) => {
 
         const newUser = await User.create({ email, password });
 
-        // Creates a session
-        req.session.user = newUser.toJSON();
+        req.session.save(() => {
+            req.session.loggedIn = true;
+            res.status(201).json({ success: true, message: 'Registration successful' });
+        });
 
-        res.status(201).json({ success: true, message: 'Registration successful' });
+        // Redirect to the login page after successful registration
+        res.redirect('/'); 
+
     } catch (error) {
         console.error('Registration error:', error);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -27,7 +31,7 @@ router.post('/register', async (req, res) => {
 });
 
 // User logs in
-router.get('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -37,10 +41,13 @@ router.get('/login', async (req, res) => {
             return res.status(400).json({ success: false, message: 'Invalid credentials' });
         }
 
-        // Creates a session
+        // Set the session for the logged-in user
         req.session.user = user.toJSON();
+        req.session.loggedIn = true;
 
-        res.status(200).json({ success: true, message: 'Login successful' });
+        // Redirect to the homepage after successful login
+        res.redirect('/homepage');
+
     } catch (error) {
         console.error('Login error:', error);
         res.status(500).json({ success: false, message: 'Internal server error' });

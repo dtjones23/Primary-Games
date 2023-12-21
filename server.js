@@ -6,6 +6,7 @@ import exphbs from 'express-handlebars';
 import routes from './controllers/index.js';
 import session from 'express-session';
 import connectSessionSequelize from 'connect-session-sequelize';
+
 const SequelizeStore = connectSessionSequelize(session.Store);
 // import helpers from './utils/helpers';
 import sequelize from './config/connection.js';
@@ -17,7 +18,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Create the Handlebars.js engine object with custom helper functions
-const hbs = exphbs.create({  });
+const hbs = exphbs.create({});
 
 const sess = {
   secret: 'really really deep secret', //  Used to sign the session ID cookie
@@ -27,13 +28,16 @@ const sess = {
   
   // Stores session data in a Sequelize-managed database
   store: new SequelizeStore({
-    db: sequelize
+    db: sequelize,
+    // checkExpirationInterval: 15 * 60 * 1000, // The interval at which to cleanup expired sessions in milliseconds.
+    // expiration: 24 * 60 * 60 * 1000, // The maximum age (in milliseconds) of a valid session.
 
   })
 };
 
 // Manage user sessions
 app.use(session(sess));
+
 
 // Inform Express.js which template engine we're using
 app.engine('handlebars', hbs.engine);
