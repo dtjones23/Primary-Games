@@ -18,9 +18,10 @@
     width: 30vw;
 }
 
-.gameCover {
-    width: 100vw;
+.main-background {
+    width: 95vw;
     height: 500px;
+    border-radius: 30px;
 }
 
 .game-card {
@@ -45,3 +46,4 @@
     box-sizing: border-box;
     text-align: center;
 }
+
