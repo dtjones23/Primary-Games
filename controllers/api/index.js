@@ -8,10 +8,10 @@ import userRoutes from "./userRoutes.js";
 
 const router = express.Router();
 
-router.use('/categories', categoryRoutes);
-router.use('/developers', developerRoutes);
-router.use('/platforms', platformRoutes);
-router.use('/games', gameRoutes);
+router.use('/', categoryRoutes);
+router.use('/', developerRoutes);
+router.use('/', platformRoutes);
+router.use('/', gameRoutes);
 router.use('/users', userRoutes);
 
 export default router;

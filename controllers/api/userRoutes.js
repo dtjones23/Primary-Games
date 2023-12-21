@@ -14,15 +14,12 @@ router.post('/register', async (req, res) => {
             return res.status(400).json({ success: false, message: 'User already exists' });
         }
 
-        const newUser = await User.create({ email, password });
+        await User.create({ email, password });
 
         req.session.save(() => {
             req.session.loggedIn = true;
             res.status(201).json({ success: true, message: 'Registration successful' });
         });
-
-        // Redirect to the login page after successful registration
-        res.redirect('/'); 
 
     } catch (error) {
         console.error('Registration error:', error);
@@ -45,8 +42,8 @@ router.post('/login', async (req, res) => {
         req.session.user = user.toJSON();
         req.session.loggedIn = true;
 
-        // Redirect to the homepage after successful login
-        res.redirect('/homepage');
+        // Send the user JSON object to the front end
+        res.status(200).json({ success: true, user: req.session.user });
 
     } catch (error) {
         console.error('Login error:', error);
