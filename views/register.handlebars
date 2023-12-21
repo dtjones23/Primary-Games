@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #fff; /* Set background color to white */
+            color: #e44d26; /* Set text color to red */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .section {
+            background-color: #fff; /* Set background color to white */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .title {
+            color: #e44d26; /* Set title color to red */
+        }
+
+        .button.is-primary {
+            background-color: #e44d26; /* Set button background color to red */
+            color: #fff; /* Set button text color to white */
+        }
+
+        .button.is-primary:hover {
+            background-color: #b6341e; /* Set button background color on hover */
+        }
+
+        a {
+            color: #e44d26; /* Set link color to red */
+        }
+
+        a:hover {
+            color: #b6341e; /* Set link color on hover */
+        }
+    </style>
 </head>
+
 <body>
     <section class="section">
         <div class="container">
+            <!-- Title -->
             <h2 class="title">Create an Account</h2>
 
             <!-- Registration Form -->
@@ -41,4 +84,5 @@
 
     <script src="/public/js/login.js"></script>
 </body>
+
 </html>
