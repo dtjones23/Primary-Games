@@ -1,49 +1,57 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-</head>
-<body>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
     <section class="section">
-        <h1 class="title is-1">Checkout</h1>
-        <div class="columns">
-            <div class="column">
-                <!-- Game Image -->
-                <figure class="image is-4by3">
-                    <img src="{{game.background_image}}" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="column">
-                <!-- Checkout Form -->
-                <div class="box">
-                    <form>
-                        <div class="field">
-                            <label class="label">Email</label>
-                            <div class="control">
-                                <input class="input" type="email" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">First Name</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="First Name">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Last Name</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-link">Confirm Buy</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <img src="/public/images/logo.png" alt="Logo Image" />
+      <h1 class="title is-1">Checkout</h1>
+      <div class="columns">
+        <div class="column">
+          <!-- Game Image -->
+          <figure class="image is-4by3">
+            <img src="{{game.background_image}}" alt="Placeholder image" style="max-width: 500px; max-height: 500px;"/>
+          </figure>
         </div>
+        <div class="column">
+          <!-- Checkout Form -->
+          <div class="box">
+            <form>
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="Email" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">First Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="First Name" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Last Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Last Name" />
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-link" id="confirmBuyButton">Confirm Buy</button>
+                </div>
+              </div>
+              <div id="confirmModal" style="display: none;">
+                <p>Are you sure you want to buy this game?</p>
+                <button id="confirmBuy">Confirm</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>

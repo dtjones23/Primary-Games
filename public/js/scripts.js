@@ -25,4 +25,12 @@ $(document).ready(function() {
         $('#popup').css('display', 'none');
     });
 
+    $('#confirmBuyButton').on('click', function() {
+        $('#confirmModal').style.display = 'block';
+    });
+    
+    $('#confirmBuy').on('click', function() {
+        window.location.href = '/mygames';
+    });
+
 });

@@ -18,10 +18,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/checkout', (req, res) => {
-  res.render('checkout');
-});
-
 router.get('/checkout/:id', async (req, res) => {
   try {
     const gameData = await Game.findByPk(req.params.id);
