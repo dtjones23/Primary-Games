@@ -7,6 +7,8 @@
 Primary Games is a digital game-link center that grants users the ability to browse across a mass number of video games and play as they please. Search for action, adventure, or even RPG - Primary Games has it all.
     
 # Usage
+https://primary-games-app3-6a2841bf5a98.herokuapp.com/
+
 Start your gaming journey with using these features:
     - Search for any game title 
     - See our list of the hottest games currently in the market
