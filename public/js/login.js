@@ -6,7 +6,7 @@ const loginFormHandler = async (event) => {
     console.log('hello login');
     if (email && password) {
         try {
-            const response = await fetch('/api/users/login', {
+            const response = await fetch('/users/login', {
                 method: 'POST',
                 body: JSON.stringify({ email, password }),
                 headers: { 'Content-Type': 'application/json' },
@@ -32,7 +32,7 @@ const registerFormHandler = async (event) => {
 
     if (email && password) {
         try {
-            const response = await fetch('/api/users/register', {
+            const response = await fetch('/users/register', {
                 method: 'POST',
                 body: JSON.stringify({ email, password }),
                 headers: { 'Content-Type': 'application/json' },
