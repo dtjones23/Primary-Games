@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // Fetch genre data from the server
-$.get('/genres', function(data) {
+$.get('/api/genres', function(data) {
     const genres = data.genres;
 
     // Sort genres array in alphabetical order
@@ -34,7 +34,7 @@ $.get('/genres', function(data) {
 /////
 
 // Fetch platform data from the server
-$.get('/platforms', function(data) {
+$.get('/api/platforms', function(data) {
     const platforms = data.platforms;
 
     // Sort platforms array in alphabetical order
@@ -66,7 +66,7 @@ $.get('/platforms', function(data) {
 //////
 
     // Fetch game data from the server
-$.get('/games', function(data) {
+$.get('/api/games', function(data) {
         const games = data.games;
 
         const gameCardTemplate = `{{#each games}}

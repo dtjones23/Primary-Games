@@ -49,9 +49,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// Route to get game data
-app.get('/games')
-
 // Listener
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
