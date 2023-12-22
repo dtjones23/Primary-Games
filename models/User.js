@@ -19,7 +19,8 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: 'Anonymous',
     },
     email: {
       type: DataTypes.STRING,

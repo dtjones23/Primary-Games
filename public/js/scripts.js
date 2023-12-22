@@ -1,28 +1,90 @@
 $(document).ready(function() {
 
-    /*
-    fetch('/games')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTPS error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        const games = data.games;
-        console.log(games);
-    })
-    .catch(error => console.error('Error:', error));
-    */
+// Fetch genre data from the server
+$.get('/genres', function(data) {
+    const genres = data.genres;
 
-    // Pop up window for games (not sure if this is needed... Yet)
-    $('.game-card').on('click', function() {
-        $('#popup').css('display', 'block');
+    // Sort genres array in alphabetical order
+    genres.sort(function(a, b) {
+        return a.name.localeCompare(b.name);
     });
 
-    // Hide popup
-    $('#close-button').on('click', function() {
-        $('#popup').css('display', 'none');
+    // Defines the Handlebars template for genre select
+    const genreSelectTemplate = `
+    <select>
+        <option>Select Genre</option>
+    {{#each genres}}
+        <option>{{this.name}}</option>
+    {{/each}}
+    </select>
+    `;
+
+    // Compile the Handlebars template
+    const compiledTemplate = Handlebars.compile(genreSelectTemplate);
+
+    // Generate HTML using the compiled template and genre data
+    const html = compiledTemplate({ genres });
+
+    // Append the generated HTML to your select container
+    $('#select-genre').html(html);
+
+    // console.log(genres); // logs array of genres
+});
+
+/////
+
+// Fetch platform data from the server
+$.get('/platforms', function(data) {
+    const platforms = data.platforms;
+
+    // Sort platforms array in alphabetical order
+    platforms.sort(function(a, b) {
+        return a.name.localeCompare(b.name);
+    });
+
+    // Defines the Handlebars template for platform select
+    const platformSelectTemplate = `
+    <select>
+        <option>Select Platform</option>
+    {{#each platforms}}
+        <option>{{this.name}}</option>
+    {{/each}}
+    </select>
+    `;
+
+    // Compile the Handlebars template
+    const compiledTemplate = Handlebars.compile(platformSelectTemplate);
+
+    // Generate HTML using the compiled template and platform data
+    const html = compiledTemplate({ platforms });
+
+    // Append the generated HTML to your select container
+    $('#select-platform').html(html);
+
+    // console.log(platforms); // logs array of platforms
+});
+//////
+
+    // Fetch game data from the server
+    $.get('/games', function(data) {
+        const games = data.games;
+
+        const gameCardTemplate = `{{#each games}}
+    <div class="game-card m-3" data-id="{{this.id}}">
+    <img src="{{this.background_image}}" alt="{{this.name}} Background">
+    <p class="game-title">{{this.name}}</p>
+    </div>
+    {{/each}}`
+
+        // Compile the Handlebars template for game cards
+        const compiledGameTemplate = Handlebars.compile(gameCardTemplate);
+
+        // Generate HTML for game cards using the compiled template and game data
+        const html = compiledGameTemplate({ games });
+
+        // Append the generated HTML to the game container
+        $('.game-container').html(html);
+
     });
 
     $('#confirmBuyButton').on('click', function() {

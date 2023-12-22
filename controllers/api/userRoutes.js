@@ -14,12 +14,13 @@ router.post('/register', async (req, res) => {
             return res.status(400).json({ success: false, message: 'User already exists' });
         }
 
-        const newUser = await User.create({ email, password });
+        await User.create({ email, password });
 
-        // Creates a session
-        req.session.user = newUser.toJSON();
+        req.session.save(() => {
+            req.session.loggedIn = true;
+            res.status(201).json({ success: true, message: 'Registration successful' });
+        });
 
-        res.status(201).json({ success: true, message: 'Registration successful' });
     } catch (error) {
         console.error('Registration error:', error);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -37,16 +38,18 @@ router.post('/login', async (req, res) => {
             return res.status(400).json({ success: false, message: 'Invalid credentials' });
         }
 
-        // Creates a session
+        // Set the session for the logged-in user
         req.session.user = user.toJSON();
+        req.session.loggedIn = true;
 
-        res.status(200).json({ success: true, message: 'Login successful' });
+        // Send the user JSON object to the front end
+        res.status(200).json({ success: true, user: req.session.user });
+
     } catch (error) {
         console.error('Login error:', error);
         res.status(500).json({ success: false, message: 'Internal server error' });
     }
 });
-
 
 
 export default router;

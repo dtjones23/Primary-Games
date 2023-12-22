@@ -5,35 +5,24 @@ const router = express.Router();
 const APIKey = "ca6843ad46b947099b5a639778e7a3be";
 const gamesAPI = "https://api.rawg.io/api/games";
 
-// Middleware function that fetches games from the API
-const fetchGamesMiddleware = async (req, res, next) => {
+// Route to fetch game data from the RAWG API
+router.get('/games', async (req, res) => {
     try {
-        const response = await fetch(gamesAPI + `?key=${APIKey}`);
+        const response = await fetch(`${gamesAPI}?key=${APIKey}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const data = await response.json();
-        // Attach the fetched games to the request object for later use
-        req.games = data.results; // Adjust this line based on the actual structure of your API response
+        const games = data.results; // Array of games
 
-        next();
+        res.json({ games });
+
     } catch (error) {
         console.error("Error:", error);
-        next(error); // Pass the error to the error handling middleware
+        res.status(500).json({ error: "Failed to fetch game data" });
     }
-};
-
-router.get('/games', (req, res) => {
-    // Access the fetched games through req.games
-    const games = req.games;
-
-    // Send the games as a response
-    res.json({ games });
 });
-
-// Use the middleware for all routes in this router
-router.use(fetchGamesMiddleware);
 
 // // Example route handler using the fetched games
 // router.get('/games', (req, res) => {

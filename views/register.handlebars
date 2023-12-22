@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #fff; /* Set background color to white */
+            color: #e44d26; /* Set text color to red */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .logo-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 200px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            margin-right: 1rem; /* Adjust the margin as needed */
+        }
+
+        .section {
+            background-color: #fff; /* Set background color to white */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .title {
+            color: #e44d26; /* Set title color to red */
+        }
+
+        .button.is-primary {
+            background-color: #e44d26; /* Set button background color to red */
+            color: #fff; /* Set button text color to white */
+        }
+
+        .button.is-primary:hover {
+            background-color: #b6341e; /* Set button background color on hover */
+        }
+
+        a {
+            color: #e44d26; /* Set link color to red */
+        }
+
+        a:hover {
+            color: #b6341e; /* Set link color on hover */
+        }
+    </style>
 </head>
+
 <body>
+    <img class="logo-image" src="/images/logo.png" alt="Logo">
     <section class="section">
         <div class="container">
+            <!-- Title -->
             <h2 class="title">Create an Account</h2>
 
             <!-- Registration Form -->
@@ -29,16 +82,17 @@
 
                 <div class="field">
                     <div class="control">
-                        <button class="button is-primary" type="button" onclick="handleRegistration()">Create Account</button>
+                        <button class="button is-primary" type="submit">Create Account</button>
                     </div>
                 </div>
             </form>
 
             <!-- Link to Login Page -->
-            <p>Already have an account? <a href="/views/login.handlebars">Login</a>.</p>
+            <p>Already have an account? <a href="/">Login</a>.</p>
         </div>
     </section>
 
-    <script src="/public/js/login.js"></script>
+    <script src="/js/login.js"></script>
 </body>
+
 </html>

@@ -5,27 +5,24 @@ const router = express.Router();
 const APIKey = "ca6843ad46b947099b5a639778e7a3be";
 const genresAPI = "https://api.rawg.io/api/genres";
 
-// Middleware function that fetches genres from the API
-const fetchGenresMiddleware = async (req, res, next) => {
+// Route to fetch game data from the RAWG API
+router.get('/genres', async (req, res) => {
     try {
-        const response = await fetch(genresAPI + `?key=${APIKey}`);
+        const response = await fetch(`${genresAPI}?key=${APIKey}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const data = await response.json();
-        // Attach the fetched genres to the request object for later use
-        req.genres = data.results; // Adjust this line based on the actual structure of your API response
+        const genres = data.results; // Attach the fetched genres to the request object for later use
 
-        next();
+        res.json({ genres });
+
     } catch (error) {
         console.error("Error:", error);
-        next(error); // Pass the error to the error handling middleware
+        res.status(500).json({ error: "Failed to fetch Genre data" });
     }
-};
-
-// Use the middleware for all routes in this router
-router.use(fetchGenresMiddleware);
+});
 
 // // Example route handler using the fetched genres
 // router.get('/categories', (req, res) => {

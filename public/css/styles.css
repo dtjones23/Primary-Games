@@ -1,7 +1,13 @@
-
-
 #shopping-cart-icon {
     color: blue; /* Replace 'red' with the color you want */
+}
+
+#cart-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; /* Hide it by default */
+    /* Add other styles as needed (e.g., width, background color, etc.) */
 }
 
 .vw {
@@ -9,12 +15,13 @@
 }
 
 .input {
-    width: 30vw
+    width: 30vw;
 }
 
-.gameCover {
-    width: 100vw;
+.main-background {
+    width: 95vw;
     height: 500px;
+    border-radius: 30px;
 }
 
 .game-card {
@@ -40,13 +47,3 @@
     text-align: center;
 }
 
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #000;
-    width: 300px;
-    box-sizing: border-box;

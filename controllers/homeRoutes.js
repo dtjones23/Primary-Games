@@ -1,32 +1,48 @@
-import {monitorEventLoopDelay} from "node:perf_hooks";
+// controllers/homeRoutes.js
 import express from "express";
 import Game from "../models/Game.js";
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  try {
-    //const productData = await Product.findAll();
-    //const products = productData.map((product) => product.get({ plain: true }));
-    //DO THE ABOVE FOR YOUR GAME DATA OR USER DATA IN ORDER TO SHOW WITH HANDLEBARS
+    try {
+        if (req.session.loggedIn) {
+        res.redirect('/homepage');
+        } else {
+            res.render('login');
+        }
+    } catch (err) {
+        console.error('Error rendering login page', err);
+        res.status(500).json(err);
+    }
+});
 
-    res.render('homepage'
-    //, {products: products}
-);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get('/register', (req, res) => {
+    res.render('register');
+});
+
+router.get('/homepage', (req, res) => {
+  res.render('homepage');
+});
+
+router.get('/mygames', (req, res) => {
+    res.render('mygames');
+  });
+  
+
+router.get('/checkout', (req, res) => {
+    res.render('checkout');
 });
 
 router.get('/checkout/:id', async (req, res) => {
-  try {
-    const gameData = await Game.findByPk(req.params.id);
-    const game = gameData.get({ plain: true });
+    try {
+        const gameData = await Game.findByPk(req.params.id);
+        const game = gameData.get({ plain: true });
 
-    res.render('checkout', { game });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+        res.render('checkout', { game });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 export default router;

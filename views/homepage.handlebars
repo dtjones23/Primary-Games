@@ -12,83 +12,55 @@
     </p>
     </div>
 
-    <input class="input is-rounded m-auto" type="text" placeholder="Rounded input">
-    <a><i class="fas fa-shopping-cart m-5 p-0 is-size-4" id="shopping-cart-icon"></i></a>
+    <input class="input is-rounded m-auto" type="text" placeholder="PlayStation is the best Console">
+    <a><i class="fas fa-shopping-cart m-5 p-0 is-size-4" id="shopping-cart"></i></a>
 
 </section>
 
     <!--random Game Cover background Image-->
-<section class="hero mb-5 is-medium has-background-dark">
-    <div class="gameCover">
-    </div>
+<section class="hero mb-5 is-medium">
+    <!-- Game Image -->
+        <img class="main-background m-auto" src="https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"<!--{{game.background_image}}-->>
 </section>
 
-<section class="hero m-auto">
-    <div class="buttons is-flex is-flex-direction-row">
-    <button class="button is-normal">PlayStation 5</button>
-    <button class="button is-normal">PlayStation 4</button>
-    <button class="button is-normal">Xbox Series X</button>
-    <button class="button is-normal">Xbox One</button>
-    <button class="button is-normal">Nitendo Switch</button>
-    <button class="button is-normal">PC</button>
-    <button class="button is-normal">View All</button>
+<!-- Platform  Section -->
+<section class="hero m-auto is-flex is-flex-direction-row is-flex-wrap-wrap">
+
+<!-- Platform select Container -->
+    <div class="select m-3 is-medium is-danger" id="select-platform">
+        {{platformSelectTemplate}}
     </div>
 
-    <div>
-    <button class="button is-small">Action Adventure</button>
-    <button class="button is-small">Arcade/Puzzle</button>
-    <button class="button is-small">Family/Party</button>
-    <button class="button is-small">Fighting</button>
-    <button class="button is-small">Music/Dancing</button>
-    <button class="button is-small">Racing</button>
-    <button class="button is-small">RPG</button>
-    <button class="button is-small">Shooter</button>
-    <button class="button is-small">Sports</button>
-    <button class="button is-small">Strategy/Slim</button>
-    </div>
+    <!-- Platform select Container -->
+    <div class="select m-3 is-medium is-danger" id="select-genre">
+        {{genreSelectTemplate}}
+    </div>  
+
 </section>
 
+<!-- Game Section -->
 <section class="hero is-small mt-5">
     <div class="hero-body">
     <p class="title is-underlined">
     Games
     </p>
-    <p>Genre/s:</p>
-    <p>Platform/s:</p>
     </div>
 </section>
 
+<!-- Game Container -->
 <section class="hero is-large is-flex is-flex-direction-column">
-
     <div class="game-container m-5 is-flex is-flex-direction-row is-justify-content-space-evenly is-flex-wrap-wrap">
     
-
-    <!-- Game Card -->
-    <div class="game-card">
-        <img src="#" alt="Game Background">
-        <p class="game-title">Game Title</p>
-    </div>
-
+    <!-- Game Cards-->
+    {{gameCardTemplate}}
+    
     <!-- Pop-up Window for card-->
     <div id="popup" class="popup" style="display: none;">
-        <button id="close-button">Close</button>
-        <p class="game-bio">Game 1 Bio</p>
+        <button id="close-button">X</button>
+        <p class="game-bio">{{this.description}}</p>
         <p class="game-platform">Game Platform</p>
         <p class="game-cost">Game Cost</p>
-    </div>
-
-    <!-- Game Card -->
-    <div class="game-card">
-        <img src="#" alt="Game Background">
-        <p class="game-title">Game Title</p>
-    </div>
-
-    <!-- Pop-up Window for card-->
-    <div id="popup" class="popup" style="display: none;">
-        <button id="close-button">Close</button>
-        <p class="game-bio">Game 2 Bio</p>
-        <p class="game-platform">Game Platform</p>
-        <p class="game-cost">Game Cost</p>
+        <button class="button is-primary" id="add-to-cart-button">Add to Cart</button>
     </div>
 
     </div>
