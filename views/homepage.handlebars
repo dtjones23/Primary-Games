@@ -3,24 +3,20 @@
 
 <section class="hero is-flex is-flex-direction-row">
 
-    <div class="hero-body">
-    <p class="title">
-    Primary Games
-    </p>
-    <p class="subtitle">
-        World's #1 Game Shop 
-    </p>
+    <div class="hero-body is-flex is-flex-direction-row">
+    <img class='site-logo' src="/images/logo.png" alt="site-logo">
+    <p class="title text-color">Primary Games</p>
     </div>
 
-    <input class="input is-rounded m-auto" type="text" placeholder="PlayStation is the best Console">
-    <a><i class="fas fa-shopping-cart m-5 p-0 is-size-4" id="shopping-cart"></i></a>
+    <input class="input is-rounded p-3 m-auto" type="text" placeholder="PlayStation is the best Console">
+    <a><i class="fas fa-shopping-cart m-4 is-size-4" id="shopping-cart"></i></a>
 
 </section>
 
     <!--random Game Cover background Image-->
 <section class="hero mb-5 is-medium">
     <!-- Game Image -->
-        <img class="main-background m-auto" src="https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"<!--{{game.background_image}}-->>
+        <img class="main-background m-auto" src="https://media.rawg.io/media/games/226/2262cea0b385db6cf399f4be831603b0.jpg">
 </section>
 
 <!-- Platform  Section -->
@@ -41,7 +37,7 @@
 <!-- Game Section -->
 <section class="hero is-small mt-5">
     <div class="hero-body">
-    <p class="title is-underlined">
+    <p class="title is-underlined text-color">
     Games
     </p>
     </div>
@@ -57,7 +53,7 @@
     <!-- Pop-up Window for card-->
     <div id="popup" class="popup" style="display: none;">
         <button id="close-button">X</button>
-        <p class="game-bio">{{this.description}}</p>
+        <p class="game-bio">...</p>
         <p class="game-platform">Game Platform</p>
         <p class="game-cost">Game Cost</p>
         <button class="button is-primary" id="add-to-cart-button">Add to Cart</button>
@@ -66,7 +62,5 @@
     </div>
 
 </section>
-
-
 
 </section>

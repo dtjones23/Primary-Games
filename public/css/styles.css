@@ -1,13 +1,24 @@
-#shopping-cart-icon {
-    color: blue; /* Replace 'red' with the color you want */
+body {
+    background-color: #fdf0d5;
 }
 
-#cart-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none; /* Hide it by default */
-    /* Add other styles as needed (e.g., width, background color, etc.) */
+.text-color {
+    color: #003049;
+}
+
+.site-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.search-cart {
+    height: 200px;
+    border: red solid 1px;
+}
+
+#shopping-cart-icon {
+    color: blue; /* Replace 'red' with the color you want */
 }
 
 .vw {

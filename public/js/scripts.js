@@ -66,7 +66,7 @@ $.get('/platforms', function(data) {
 //////
 
     // Fetch game data from the server
-    $.get('/games', function(data) {
+$.get('/games', function(data) {
         const games = data.games;
 
         const gameCardTemplate = `{{#each games}}
@@ -84,7 +84,6 @@ $.get('/platforms', function(data) {
 
         // Append the generated HTML to the game container
         $('.game-container').html(html);
-
     });
 
     $('#confirmBuyButton').on('click', function() {
