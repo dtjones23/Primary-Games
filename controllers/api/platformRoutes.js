@@ -24,12 +24,12 @@ router.get('/platforms', async (req, res) => {
     }
 });
 
-// // Example route handler using the fetched platforms
+   // Example route handler using the fetched platforms
 // router.get('/platforms', (req, res) => {
-//     // Access the fetched platforms through req.platforms
+       // Access the fetched platforms through req.platforms
 //     const platforms = req.platforms;
 //
-//     // Use the developers in your response or further processing
+       // Use the developers in your response or further processing
 //     res.json({ platforms });
 // });
 

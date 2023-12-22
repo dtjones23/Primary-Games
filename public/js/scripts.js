@@ -87,4 +87,12 @@ $.get('/platforms', function(data) {
 
     });
 
+    $('#confirmBuyButton').on('click', function() {
+        $('#confirmModal').style.display = 'block';
+    });
+    
+    $('#confirmBuy').on('click', function() {
+        window.location.href = '/mygames';
+    });
+
 });
