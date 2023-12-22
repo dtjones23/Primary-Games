@@ -8,6 +8,7 @@ const gamesAPI = "https://api.rawg.io/api/games";
 // Route to fetch game data from the RAWG API
 router.get('/games', async (req, res) => {
     try {
+    
         const response = await fetch(`${gamesAPI}?key=${APIKey}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
